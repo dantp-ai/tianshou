@@ -15,9 +15,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": ["poetry config virtualenvs.create true --local",
-							"poetry config virtualenvs.in-project true --local",
-							"poetry install --with dev --extras 'envpool eval'"],
+	"postCreateCommand": "poetry config virtualenvs.create true --local && poetry config virtualenvs.in-project true --local && poetry install --with dev --extras 'envpool eval'",
 
 	// Configure tool-specific properties.
 	"customizations": {
